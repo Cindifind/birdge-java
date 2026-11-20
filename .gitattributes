@@ -1,0 +1,5 @@
+# 源码与配置统一使用 LF，避免跨平台构建与 npm pack 校验受换行符影响
+* text=auto eol=lf
+
+# 二进制产物按原样提交
+*.jar binary

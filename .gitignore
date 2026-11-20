@@ -1,0 +1,13 @@
+node_modules/
+lib/
+
+# npm pack 产物
+*.tgz
+
+# TypeScript 增量构建信息
+*.tsbuildinfo
+
+# 编辑器与系统文件
+.idea/
+.DS_Store
+Thumbs.db

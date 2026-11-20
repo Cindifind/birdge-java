@@ -1,0 +1,73 @@
+{
+  "name": "@cindifind/java-bridge",
+  "version": "1.0.0",
+  "description": "Runs Java plugins in their own process over OneBot 11 events and actions",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "webui",
+    "onebot-bridge.jar"
+  ],
+  "keywords": [
+    "luckylillia-plugin",
+    "onebot",
+    "onebot11",
+    "java",
+    "qq"
+  ],
+  "author": "Cindifind",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cindifind/birdge-java.git"
+  },
+  "homepage": "https://github.com/Cindifind/birdge-java",
+  "bugs": {
+    "url": "https://github.com/Cindifind/birdge-java/issues"
+  },
+  "engines": {
+    "node": ">=22.15"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "tsc -p . --watch",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@luckylillia/plugin-sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@luckylillia/plugin-sdk": "file:../LuckyLilliaBot/packages/plugin-sdk",
+    "@satorijs/element": "^3.2.0",
+    "@satorijs/protocol": "^1.7.0",
+    "@types/node": "^24.0.0",
+    "cordis": "4.0.0-rc.11",
+    "schemastery": "^3.18.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "llbot": {
+    "title": "Java 插件桥接",
+    "description": {
+      "zh": "让 Java 写的插件跑在独立的 Java 进程里，收发 OneBot 11 的事件、调用 OneBot 11 的 API",
+      "en": "Runs Java plugins in their own process over OneBot 11 events and actions"
+    },
+    "category": "tool",
+    "icon": "terminal",
+    "service": {
+      "required": [
+        "bots"
+      ],
+      "optional": [
+        "webuiServer"
+      ]
+    },
+    "webui": "webui/index.js"
+  }
+}
